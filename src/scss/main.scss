@@ -1,0 +1,72 @@
+//Reset CSS
+@use "./reset";
+
+//Variables
+@use "./variables";
+
+//Layout
+@use "./layout/grid";
+@use "./layout/navigation";
+@use "./layout/header";
+@use "./layout/footer";
+
+//Page
+@use "./pages/home.scss";
+@use "./pages/about.scss";
+
+//Components
+@use "./components/buttons";
+@use "./components/forms";
+
+@use "./mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.3;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$heading-font;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+}

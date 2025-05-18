@@ -1,0 +1,156 @@
+@use "../mixins";
+
+//Variables
+@use "../variables";
+
+//HEADER
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  width: 100%;
+  min-height: 859px;
+  background-color: variables.$color-yellow;
+  border: 1.5px solid variables.$color-black;
+}
+
+.header-content {
+  margin-top: 190px;
+
+  .header-text {
+    height: 100%;
+    .hashtag {
+      margin-top: 20px;
+      font-size: 1.8rem;
+      font-family: variables.$heading-font;
+      line-height: 30px;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 6rem;
+      line-height: 70px;
+      font-weight: 800;
+      font-family: variables.$heading-font;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 1.8rem;
+      line-height: 30px;
+    }
+
+    .btn {
+      margin-top: 40px;
+      width: 242px;
+      height: 60px;
+      background-color: variables.$primary-color;
+      color: variables.$color-white;
+      font-size: 1.8rem;
+      transition: opacity ease 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  //Hero Image
+  .header-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: variables.$tertiary-color;
+
+    .img-hero {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: cover;
+      overflow: hidden;
+      width: 330px;
+      height: 476px;
+    }
+
+    .play-btn {
+      position: absolute;
+      top: -48px;
+      left: -48px;
+      width: 100px;
+      height: 100px;
+      background-color: variables.$color-black;
+      border-radius: 50%;
+
+      i {
+        color: variables.$color-white;
+        font-size: 2.6rem;
+      }
+
+      .play-group {
+        position: relative;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: -38px;
+        left: -42px;
+        width: 184px;
+        height: 85px;
+        content: "";
+        background: url(./img/img-watch-our-video.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: -44px;
+        width: 184px;
+        height: 85px;
+        content: "";
+        background: url(./img/img-watch-our-video.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        rotate: 180deg;
+      }
+    }
+
+    .img-wrapper::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 170px;
+      height: 422px;
+      background-color: variables.$secondary-color;
+    }
+
+    .img-wrapper::before {
+      position: absolute;
+      content: "";
+      background: url(./img/img-mask-1.svg);
+      top: 100px;
+      right: -100px;
+      z-index: 2;
+      width: 164px;
+      height: 128px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include mixins.screen(md) {
+        top: 100px;
+        right: -77px;
+        z-index: 2;
+        width: 130px;
+        height: 90px;
+      }
+    }
+  }
+}
