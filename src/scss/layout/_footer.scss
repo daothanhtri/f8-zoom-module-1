@@ -4,12 +4,18 @@
 @use "../variables";
 
 .footer {
-  min-height: 590px;
   background-color: variables.$color-black;
-  padding-top: 60px;
+  padding: 60px;
+  overflow: hidden;
+
+  .widget {
+    margin-top: 20px;
+  }
+
   .footer-top {
     padding: 30px 0;
     border-bottom: 1px solid #313d39;
+    overflow: hidden;
     h3 {
       font-size: 2rem;
       line-height: 30px;
@@ -82,6 +88,11 @@
       justify-content: end;
       align-items: end;
       gap: 10px;
+
+      @include mixins.screen(md) {
+        margin-top: 10px;
+        justify-content: start;
+      }
 
       a {
         padding: 10px 14px;

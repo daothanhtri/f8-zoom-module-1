@@ -1,32 +1,134 @@
 <header class="header">
   <div class="container">
-    <%- include("./partials/navigation.ejs") %>
-    <div class="header-content">
+    <div class="header-bar">
       <div class="row">
-        <div
-          class="gx-3 col-6 col-xl-5 col-lg-4 gx-lg-3 col-md-12 gy-md-5 col-sm-12"
-        >
-          <div class="header-text">
-            <span class="hashtag">#1 Law Firm in New York</span>
-            <h1>Where People Meets Personalized Support.</h1>
-            <p>
-              Where every injury is personal. We are a different kind of law
-              firm. Let our small, passionate group of trial lawyers fight for
-              your rights!
-            </p>
-            <button class="btn">Get a Consultations</button>
+        <!-- Menu-Drawer -->
+        <div class="col-0 g-0 col-xl-1 col-lg-1">
+          <label for="drawer" class="menu-open">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <input type="checkbox" name="drawer" id="drawer" hidden />
+          <label for="drawer" class="drawer-overlay"></label>
+          <div class="menu-drawer">
+            <label for="drawer" class="menu-close">
+              <i class="fa-solid fa-xmark"></i>
+            </label>
+            <ul class="drawer-list">
+              <li class="active"><a href="*!">Home</a></li>
+              <li>
+                <a href=""><span>About</span></a>
+              </li>
+              <li>
+                <a href="">
+                  <span>Practice Areas</span>
+                </a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="">
+                      <span>Divorce</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href=""><span>Personal Injury</span> </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span>Employment</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span>Immigration</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span>Family</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span>Property</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Attorneys</a>
+              </li>
+              <li>
+                <a href=""><span>Page</span></a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div
-          class="gx-3 col-5 offset-1 col-xl-4 col-lg-4 gx-lg-3 col-md-12 gy-md-5 col-sm-12"
-        >
-          <div class="header-image">
-            <div class="play-group">
-              <button class="play-btn"><i class="fa-solid fa-play"></i></button>
-            </div>
-            <div class="img-wrapper">
-              <img class="img-hero" src="./img/img-header.png" alt="" />
-            </div>
+        <!-- Logo -->
+        <div class="col-3 col-xl-5 col-lg-1">
+          <div class="header-logo">
+            <a href="">
+              <i class="fa-solid fa-gavel"></i>
+              <strong>Justice</strong>
+              <span>Law Firm</span>
+            </a>
+          </div>
+        </div>
+        <!-- Menu -->
+        <nav class="col-6 col-xl-2 col-lg-1">
+          <ul class="nav-menu">
+            <li class="active"><a href="*!">Home</a></li>
+            <li>
+              <a href=""><span>About</span></a>
+            </li>
+            <li>
+              <a href="">
+                <span>Practice Areas</span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="">
+                    <span>Divorce</span>
+                  </a>
+                </li>
+                <li>
+                  <a href=""><span>Personal Injury</span> </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Employment</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Immigration</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Family</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span>Property</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Attorneys</a>
+            </li>
+            <li>
+              <a href=""><span>Page</span></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Contact -->
+        <div class="col-3 col-xl-4 col-lg-9">
+          <div class="header-contact">
+            <p tel:to>
+              Call:
+              <strong><a href="tel:+000123456789">(000) 123 456 789</a></strong>
+            </p>
           </div>
         </div>
       </div>
