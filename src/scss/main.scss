@@ -14,11 +14,12 @@
 @use "./pages/about.scss";
 @use "./pages/practice.scss";
 @use "./pages/blog.scss";
+@use "./pages/contact.scss";
 
 //Components
-@use "./components/buttons";
 @use "./components/forms";
 
+//Responsive
 @use "./mixins";
 
 * {
