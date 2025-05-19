@@ -27,30 +27,22 @@
   }
 
   h1 {
-    max-width: 30%;
+    max-width: 50%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     font-size: 4.2rem;
 
-    @include mixins.screen(xxl) {
-      font-size: 2.1rem;
-    }
-
     @include mixins.screen(xl) {
-      font-size: 2.1rem;
+      font-size: 3.1rem;
     }
 
     @include mixins.screen(lg) {
-      font-size: 1.7rem;
+      font-size: 2.1rem;
     }
 
     @include mixins.screen(md) {
-      font-size: 1.2rem;
-    }
-
-    @include mixins.screen(sm) {
-      font-size: 0.8rem;
+      font-size: 1.8rem;
     }
   }
 }
