@@ -3,6 +3,9 @@
 @use "../variables";
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 98;
   width: 100%;
   padding: 30px;
   background-color: variables.$color-yellow;
@@ -73,6 +76,7 @@
   .nav-menu {
     height: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     @include mixins.screen(xl) {
