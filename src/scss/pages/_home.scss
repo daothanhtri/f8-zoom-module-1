@@ -1,15 +1,39 @@
 @use "../variables";
 @use "../mixins";
 
-//Hero
+//Section Hero
 .hero {
-  padding: 60px;
   width: 100%;
+  padding: 60px;
   background-color: variables.$color-yellow;
 
-  .hero-content {
-    margin-top: 190px;
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
 
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
+
+  .hero-content {
+    margin-top: 30px;
+
+    @include mixins.screen(xl) {
+      margin-top: 0;
+    }
+    
     .hero-text {
       height: 100%;
       .hashtag {
@@ -96,7 +120,7 @@
           width: 184px;
           height: 85px;
           content: "";
-          background: url(./img/img-watch-our-video.svg);
+          background: url(../img/img-watch-our-video.svg);
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -105,12 +129,12 @@
         &::after {
           display: block;
           position: absolute;
-          top: 0px;
+          top: 5px;
           left: -90px;
           width: 184px;
           height: 85px;
           content: "";
-          background: url(./img/img-watch-our-video.svg);
+          background: url(../img/img-watch-our-video.svg);
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -134,13 +158,15 @@
 
         &::before {
           position: absolute;
+          display: block;
           content: "";
-          background: url(./img/img-mask-1.svg);
-          top: 100px;
-          right: -100px;
+          background: url(../img/img-mask-1.svg);
+          top: 30%;
+          right: -17%;
           z-index: 2;
-          width: 164px;
-          height: 128px;
+          aspect-ratio: 164 / 128;
+          width: 30%;
+          height: auto;
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
@@ -148,6 +174,7 @@
 
         &::after {
           position: absolute;
+          display: block;
           content: "";
           left: 0;
           bottom: 0;
@@ -167,6 +194,26 @@
   width: 100%;
   padding: 60px;
   background-color: variables.$color-black;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .img-wrapper {
     position: relative;
@@ -195,12 +242,13 @@
     &::after {
       position: absolute;
       content: "";
-      background: url(./img/img-mask-2.svg);
-      top: 305px;
-      right: -60px;
+      background: url(../img/img-mask-2.svg);
+      top: 50%;
+      right: -10%;
       z-index: 1;
-      width: 114px;
-      height: 158px;
+      aspect-ratio: 114 / 158;
+      width: 22%;
+      height: auto;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -210,6 +258,10 @@
   .about-text {
     margin-top: 60px;
     color: variables.$color-white;
+
+    @include mixins.screen(xl) {
+      margin-top: 0;
+    }
 
     .hashtag {
       font-family: variables.$heading-font;
@@ -279,10 +331,29 @@
 }
 
 //Section Services
-
 .services {
   width: 100%;
   padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .services-header {
     width: 470px;
@@ -376,11 +447,30 @@
   }
 }
 
-//Features 1
-
+//Section Features 1
 .features-1 {
   width: 100%;
   padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .img-wrapper {
     position: relative;
@@ -409,12 +499,13 @@
     &::after {
       position: absolute;
       content: "";
-      background: url(./img/img-mask-3.svg);
-      top: 160px;
-      left: -50px;
+      background: url(../img/img-mask-3.svg);
+      top: 30%;
+      left: -10%;
       z-index: 1;
-      width: 117px;
-      height: 129px;
+      aspect-ratio: 117 / 129;
+      width: 25%;
+      height: auto;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -423,6 +514,10 @@
 
   .features-text {
     margin-top: 60px;
+
+    @include mixins.screen(xl) {
+      margin-top: 0;
+    }
 
     .hashtag {
       font-family: variables.$heading-font;
@@ -463,10 +558,30 @@
   }
 }
 
-//Features 2
+//Section Features 2
 .features-2 {
   width: 100%;
   padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .img-wrapper {
     position: relative;
@@ -499,12 +614,13 @@
     &::after {
       position: absolute;
       content: "";
-      background: url(./img/img-mask-4.svg);
-      top: 270px;
-      left: -70px;
+      background: url(../img/img-mask-4.svg);
+      top: 45%;
+      left: -12%;
       z-index: 1;
-      width: 130px;
-      height: 93px;
+      aspect-ratio: 130 / 93;
+      width: 25%;
+      height: auto;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -513,6 +629,10 @@
 
   .features-text {
     margin-top: 60px;
+
+    @include mixins.screen(xl) {
+      margin-top: 0;
+    }
 
     .hashtag {
       font-family: variables.$heading-font;
@@ -557,15 +677,34 @@
   }
 }
 
-//Team
-
+//Section Team
 .team {
   width: 100%;
   padding: 60px;
   background-color: variables.$color-black;
 
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
+
   .team-header {
-    width: 470px;
+    width: 50%;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -667,12 +806,31 @@
   }
 }
 
-//Awards
-
+//Section Awards
 .awards {
   width: 100%;
   padding: 60px;
   background-color: variables.$color-yellow;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .award-header {
     width: 100%;
@@ -716,11 +874,30 @@
   }
 }
 
-//Testimonial
-
+//Section Testimonial
 .testimonial {
   width: 100%;
   padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .testimonial-header {
     .hashtag {
@@ -857,14 +1034,33 @@
   }
 }
 
-//FAQ
-
+//Section FAQ
 .faq {
   width: 100%;
   padding: 60px;
 
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
+
   .faq-header {
-    min-width: 570px;
+    min-width: 50%;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -879,7 +1075,6 @@
     h2 {
       font-size: 4.2rem;
       font-weight: 700;
-      height: 60px;
       line-height: 52px;
 
       @include mixins.screen(lg) {
@@ -986,11 +1181,31 @@
   }
 }
 
-//Blog
-
+//Section Blog
 .blog {
   width: 100%;
   padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
+
   .blog-header {
     .hashtag {
       font-family: variables.$heading-font;
@@ -1112,12 +1327,31 @@
   }
 }
 
-//CTA
-
+//Section CTA
 .cta {
   width: 100%;
   padding: 100px;
   background-color: variables.$tertiary-color;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
 
   .hashtag {
     display: block;
