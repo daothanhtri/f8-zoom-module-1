@@ -26,7 +26,7 @@
     padding: 10px;
   }
 
-  .practice-wrapper {
+  .header-wrapper {
     width: 50%;
     text-align: center;
     margin-right: auto;
@@ -36,22 +36,28 @@
       font-family: variables.$heading-font;
       font-size: 1.8rem;
       line-height: 30px;
-      color: variables.$color-black;
     }
 
     h1 {
       margin-top: 10px;
-      color: variables.$color-black;
       font-weight: 800;
       font-size: 6rem;
       line-height: 70px;
+
+      @include mixins.screen(xl) {
+        font-size: 5rem;
+      }
 
       @include mixins.screen(lg) {
         font-size: 4rem;
       }
 
       @include mixins.screen(md) {
-        font-size: 3.8rem;
+        font-size: 3rem;
+      }
+
+      @include mixins.screen(sm) {
+        font-size: 2rem;
       }
     }
 
@@ -59,7 +65,6 @@
       margin-top: 20px;
       font-size: 1.8rem;
       line-height: 30px;
-      color: variables.$color-black;
     }
   }
 }

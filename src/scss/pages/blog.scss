@@ -1,0 +1,145 @@
+@use "../variables";
+@use "../mixins";
+
+//Header
+.our-blog {
+  width: 100%;
+  padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 70px;
+
+    @include mixins.screen(xl) {
+      font-size: 5rem;
+    }
+
+    @include mixins.screen(lg) {
+      font-size: 4rem;
+    }
+
+    @include mixins.screen(md) {
+      font-size: 3rem;
+    }
+
+    @include mixins.screen(sm) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    width: 40%;
+    margin-top: 20px;
+    line-height: 30px;
+    color: variables.$color-grey;
+  }
+}
+
+//Blog List
+.blog-list {
+  width: 100%;
+  padding: 60px;
+
+  @include mixins.screen(xxl) {
+    padding: 50px;
+  }
+
+  @include mixins.screen(xl) {
+    padding: 40px;
+  }
+
+  @include mixins.screen(lg) {
+    padding: 30px;
+  }
+
+  @include mixins.screen(md) {
+    padding: 20px;
+  }
+
+  @include mixins.screen(sm) {
+    padding: 10px;
+  }
+
+  .blog-wrapper {
+    .thumb {
+      display: block;
+      aspect-ratio: 2.7 / 2;
+      overflow: hidden;
+
+      .blog-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: transform ease 0.4s;
+      }
+    }
+
+    &:hover {
+      .blog-img {
+        transform: scale(1.1);
+      }
+    }
+
+    .bottom {
+      margin-top: 20px;
+
+      .desc {
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 30px;
+        transition: color ease 0.4s;
+
+        &:hover {
+          color: variables.$primary-color;
+        }
+      }
+
+      .date {
+        display: block;
+        margin-top: 20px;
+        line-height: 28px;
+        color: variables.$color-grey;
+      }
+    }
+  }
+
+  .btn {
+    justify-self: center;
+    margin-top: 60px;
+    a {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 15px 35px;
+      color: variables.$color-white;
+      background-color: variables.$primary-color;
+      transition: opacity ease 0.4s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
